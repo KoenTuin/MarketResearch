@@ -3,25 +3,16 @@ import time
 
 import requests
 
-#problem list:
-#json file needs to be empty before reading every time
-#
-#
-#
-
 
 def calculatePercentage():
     with open('data.json', 'r') as f:
         list = json.load(f)["Time Series (1min)"]
-        for each in list:
-            print(each)
-
+        for time in list:
+            print(list[time]["4. close"])
+            # Calcuate percentage difference between each value and its previous value
+            # Calculate percentage change over the last 100 entries
+            #
     f.close
-
-    # with open('data.json') as f:
-    #     data = json.load(f)
-    #
-    #     print(data["Time Series (1min)"][{}]["4. close"])
 
 
 def getData():
